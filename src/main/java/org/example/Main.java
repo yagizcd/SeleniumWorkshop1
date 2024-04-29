@@ -17,6 +17,7 @@ public class Main {
 
         WebElement[] webElements = new WebElement[3];
 
+
         webElements[0]= webDriver.findElement(By.id("user-name"));
         //findElement metodu bir web sayfasında belirli bir HTML öğesini bulmak için kullanılır.
         //Bu Metot farklı seçicileri içerisine parametre olarak olarak alabilir. Web element tipinde bir obje döndürür.
@@ -36,8 +37,8 @@ public class Main {
         List<WebElement> elements = webDriver.findElements(By.cssSelector(".inventory_item_name"));
         //findElements metodu WebElement nesnesinden oluşan liste döndürür. Web elementleri bulmak için kullanılır.
         //By.cssSelector metodu ise CSS selector yapısına göre web elementleri bulur. String tipinde parametre alır.
-        // Bu satırın yaptığı işlem ise class name'i "inventory_item_name" içeren Web Elementlerini bulup bir nesneye
-        // atamaktır.
+        // Bu satırın yaptığı işlem ise class name'i "inventory_item_name" içeren Web Elementlerini bulup web elementlerden
+        // oluşan nesneye atamaktır.
         String name;
         for (WebElement element:elements){
             name = element.getText();
